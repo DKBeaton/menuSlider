@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html {
+  font-size: 17px;
+  font-family: 'Montserrat', sans-serif
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.iphone {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 414px;
+  height: 600px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.menu-container {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.menu-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.home {
+  left: 30px;
+  transition: left 0.6s ease-out;
+}
+
+.feed {
+  left: calc(2 * 88px);
+  transition: left 0.6s ease-out;
+}
+
+.feed.menu-item.active {
+  left: calc(1.44 * 88px);
+}
+
+.feed-left {
+  left: calc(1.35 * 88px); 
+}
+
+.saved {
+  transition: left 0.6s ease-out;
+  left: calc(3 * 88px);
+}
+
+.saved.menu-item.active {
+  left: calc(4 * 88px);
+}
+
+.saved-left {
+  left: calc(2.35 * 88px); 
+}
+
+.saved.menu-item.active {
+  left: calc(2.4 * 88px);
+}
+
+.settings {
+  transition: left 0.6s ease-out;
+  left: calc(4 * 88px);
+}
+
+.settings.menu-item.active {
+  left: calc(3.25 * 88px);
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  /*  width: 135px;  */
+  width: 133px;
+  height: 48px;
+  background: #5B37B7;
+  border-radius: 30px;
+  z-index: -1;
+  transition: transform 0.6s ease-out;
+}
+
+.menu-text {
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.menu-item.active .menu-text {
+  color: #fff;
+  opacity: 1;
+}
+
+.menu-item.active .menu-icon {
+  color: #fff;
+}
+
+.menu-icon {
+  color: #C5C5C5;
+  transition: color ease-out 0.6s;
+}
